@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "方案項目", "方案項目", "{1596691F-5FC5-4D7F-BC48-DDA93E9233A8}"
 	ProjectSection(SolutionItems) = preProject
 		README.txt = README.txt
+		單元測試.png = 單元測試.png
 	EndProjectSection
 EndProject
 Global
