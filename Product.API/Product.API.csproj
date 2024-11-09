@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!-- 新增資源文件的配置 -->
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Message.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Message.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Message.zh-CN.resx" /> <!-- 添加中文資源文件 -->
+    <EmbeddedResource Include="Resources\Message.en-US.resx" /> <!-- 添加英文資源文件 -->
+  </ItemGroup>
+
+  <!-- 其他已存在的配置 -->
+  <ItemGroup>
+    <Compile Remove="Properties\PublishProfiles\**" />
+    <Compile Remove="Properties\ServiceDependencies\**" />
+    <Compile Remove="Resources\**" />
+    <Compile Remove="WWResource\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="Properties\PublishProfiles\**" />
+    <Content Remove="Properties\ServiceDependencies\**" />
+    <Content Remove="Resources\**" />
+    <Content Remove="WWResource\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="Properties\PublishProfiles\**" />
+    <EmbeddedResource Remove="Properties\ServiceDependencies\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <EmbeddedResource Remove="WWResource\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="Properties\PublishProfiles\**" />
+    <None Remove="Properties\ServiceDependencies\**" />
+    <None Remove="Resources\**" />
+    <None Remove="WWResource\**" />
+    <_WebToolingArtifacts Remove="Properties\PublishProfiles\**" />
+    <_WebToolingArtifacts Remove="Properties\ServiceDependencies\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\AccountController.cs" />
+    <Compile Remove="Controllers\BasketController.cs" />
+    <Compile Remove="Controllers\CategoryController.cs" />
+    <Compile Remove="Controllers\ErrorController.cs" />
+    <Compile Remove="Controllers\OrderController.cs" />
+    <Compile Remove="Controllers\ProductController.cs" />
+    <Compile Remove="Extensions\UserManagerExtensions.cs" />
+    <Compile Remove="Middleware\LoggingMiddleware.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Server" Version="9.0.0-rc.2.24474.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.10" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.1.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.16" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\i18n\i18n.csproj" />
+    <ProjectReference Include="..\Product.Infrastructure\Product.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

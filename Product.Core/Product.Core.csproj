@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk;Microsoft.NET.Sdk.Publish">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Dto\**" />
+    <Compile Remove="Entities\Order\**" />
+    <Compile Remove="Services\**" />
+    <Compile Remove="Sharing\**" />
+    <EmbeddedResource Remove="Dto\**" />
+    <EmbeddedResource Remove="Entities\Order\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="Sharing\**" />
+    <None Remove="Dto\**" />
+    <None Remove="Entities\Order\**" />
+    <None Remove="Services\**" />
+    <None Remove="Sharing\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Entities\Address.cs" />
+    <Compile Remove="Entities\AppUsers.cs" />
+    <Compile Remove="Entities\BasicEntity.cs" />
+    <Compile Remove="Entities\BasketItem.cs" />
+    <Compile Remove="Entities\Category.cs" />
+    <Compile Remove="Entities\CustomerBasket.cs" />
+    <Compile Remove="Entities\Products.cs" />
+    <Compile Remove="Interface\IBasketRepository.cs" />
+    <Compile Remove="Interface\IcategoryRespository.cs" />
+    <Compile Remove="Interface\IGenericRepository.cs" />
+    <Compile Remove="Interface\IProductRepository.cs" />
+    <Compile Remove="Interface\ITokenServices.cs" />
+    <Compile Remove="Interface\IUnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.10" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.1.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.16" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\i18n\i18n.csproj" />
+  </ItemGroup>
+</Project>
