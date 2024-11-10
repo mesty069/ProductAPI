@@ -5,11 +5,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Data\Config\CategoryConfigration.cs" />
-    <Compile Remove="Data\Config\IdentitySeed.cs" />
-    <Compile Remove="Data\Config\OderItemConfiguration.cs" />
-    <Compile Remove="Data\Config\OrderConfiguration.cs" />
-    <Compile Remove="Data\Config\ProductConfigration.cs" />
     <Compile Remove="Repository\BasketRepository.cs" />
     <Compile Remove="Repository\CategoryRepository.cs" />
     <Compile Remove="Repository\EncryptionService.cs" />
@@ -42,8 +37,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Product.Core\Product.Core.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\Config\" />
   </ItemGroup>
 </Project>
